@@ -1,0 +1,11 @@
+E01 Local Calculator
+Copyright 2026 RUSSELL PHILIP SMITHSON
+
+Original calculator code and September 2026 modifications are provided under
+the Apache License, Version 2.0. See LICENSE.
+
+The adapted gate-condition evaluator and donor-derived tests originate from
+Microsoft Corporation's amplifier-collection-recipes project under the MIT
+License. Their upstream copyright and license remain in
+e01_calculator/vendor/LICENSE.amplifier-collection-recipes.txt.
+See THIRD-PARTY-NOTICES.md for modification details.

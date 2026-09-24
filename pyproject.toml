@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=78,<85"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "e01-local-calculator"
+version = "0.1.2a1"
+description = "Bounded exact and Decimal arithmetic with a loopback JSON service and audit receipts"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0 AND MIT"
+license-files = ["LICENSE", "NOTICE", "THIRD-PARTY-NOTICES.md", "e01_calculator/vendor/LICENSE*.txt"]
+authors = [{name = "RUSSELL PHILIP SMITHSON"}]
+dependencies = []
+
+[project.scripts]
+e01-calculator = "e01_calculator.server:main"
+
+[tool.setuptools.packages.find]
+include = ["e01_calculator*"]
+
+[tool.setuptools.package-data]
+"e01_calculator.vendor" = ["LICENSE*.txt"]
