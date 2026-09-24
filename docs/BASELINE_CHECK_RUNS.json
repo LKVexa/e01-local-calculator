@@ -1,0 +1,39 @@
+{
+ "build": "JY-S020-P001/0.1.1-partial/run-0001",
+ "environment": {
+  "executor": "claude cowork session 01SaQzDRzMFXvRabmCC6JDJD (Claude, claude-fable-5)",
+  "python": "3.11.15",
+  "platform": "Linux-6.18.44-fc-v24-x86_64-with-glibc2.39",
+  "location": "Anthropic cloud container (Linux); NOT native Windows"
+ },
+ "checks": [
+  {
+   "id": "baseline-unit-tests",
+   "command": "python3 -m unittest discover -s tests -t .",
+   "result": "PASS 36/36 (baseline 0.1.0-partial)",
+   "captured_at": "2026-09-14T18:57:24.117837+00:00"
+  },
+  {
+   "id": "candidate-unit-tests",
+   "command": "python3 -m unittest discover -s tests -t .",
+   "result": "PASS 53/53 (candidate 0.1.1-partial, incl. tests/test_hardening.py)",
+   "captured_at": "2026-09-14T18:57:24.117837+00:00"
+  },
+  {
+   "id": "defect-probes",
+   "command": "probes/probe.py + probes/probe_server.py (audit scratch)",
+   "result": "6 findings reproduced on baseline (A017-F1..F6); all non-reproducible on candidate",
+   "captured_at": "2026-09-14T18:57:24.117837+00:00"
+  }
+ ],
+ "unrun_checks": [
+  "Windows-native launch UNRUN - no Windows runtime this session",
+  "performance/stability qualification (P7)",
+  "coverage measurement (100% stmt/branch mandate)",
+  "independent review NOT PERFORMED",
+  "G0-G9 certification evidence",
+  "QAM integration tests",
+  "release signing (P8)"
+ ],
+ "note": "Evidence captured on the Linux build host; any change to inputs or environment stales these results for affected claims."
+}

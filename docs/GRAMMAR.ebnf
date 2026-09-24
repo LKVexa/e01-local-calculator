@@ -1,0 +1,15 @@
+(* E01 Local Calculator expression grammar — candidate 0.1.2a1.
+   "^" binds tighter than unary minus: -3^2 = -(3^2). "**" is an alias
+   for "^". Adjacency of a value and a primary is implicit multiplication. *)
+
+expr    = term , { ( "+" | "-" ) , term } ;
+term    = factor , { ( "*" | "/" | adjacency ) , factor } ;
+factor  = unary ;
+unary   = ( "-" | "+" ) , unary | power ;
+power   = primary , [ "^" , unary ] ;            (* right associative *)
+primary = NUMBER | CONST | func , "(" , expr , ")" | "(" , expr , ")" ;
+func    = "sqrt" | "abs" | "floor" | "ceil" | "sin" | "cos" | "tan"
+        | "ln" | "log10" | "exp" ;
+CONST   = "pi" | "e" ;
+NUMBER  = digits , [ "." , digits ] , [ ( "e" | "E" ) , [ "+" | "-" ] , digits ] ;
+digits  = digit , { digit } ;

@@ -1,0 +1,8 @@
+{
+  "gates": [
+    {"id": "G1-readiness", "condition": "{{engine_tests}} == 'pass'"},
+    {"id": "G2-readiness", "condition": "{{engine_tests}} == 'pass' and {{server_tests}} == 'pass'"},
+    {"id": "G9-readiness", "condition": "{{release_signed}} == 'true'"}
+  ],
+  "note": "Readiness conditions only. G0-G9 certification is an independent human evidence decision and is not claimed by this build."
+}
