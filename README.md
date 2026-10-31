@@ -122,7 +122,9 @@ remain open. Historical program records are retained in docs.
 
 ## License
 
-Copyright 2026 **RUSSELL PHILIP SMITHSON**.
-Original project code: [Apache License 2.0](LICENSE), with [NOTICE](NOTICE).
+Copyright (C) 2026 **RUSSELL PHILIP SMITHSON**.
+Original project code: [GNU General Public License, version 3 only (GPL-3.0-only)](LICENSE), with [NOTICE](NOTICE).
 The adapted Microsoft gate evaluator and donor-derived tests retain MIT
 licensing; see [THIRD-PARTY-NOTICES](THIRD-PARTY-NOTICES.md).
+
+See [COPYRIGHT](COPYRIGHT) for the project copyright and GPL notice.

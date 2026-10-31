@@ -16,5 +16,5 @@ and splitting with bounded token parsing, treat context values as data, validate
 all branches and enforce scalar limits. This adaptation reuses the reviewed
 local R08 candidate's parser. The file is modified, not an unmodified upstream copy.
 
-The original calculator and service code are Apache 2.0; see LICENSE and NOTICE.
+The original calculator and service code are licensed under GPL-3.0-only; see LICENSE and NOTICE.
 No other third-party code or runtime package is vendored.
